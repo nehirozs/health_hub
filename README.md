@@ -4,6 +4,10 @@ A modern, interactive health kiosk application built with React and TypeScript. 
 
 This project is a UI/UX and frontend prototype. All data is mock and no proprietary systems are included.
 
+
+https://github.com/user-attachments/assets/689f8010-bcaa-4670-a725-79ec33e70934
+
+
 ## 🚀 Features
 
 ### Core Functionality
@@ -179,8 +183,5 @@ The project uses TypeScript with strict type checking enabled.
 *Built using React, TypeScript, Blender, and modern web technologies*
 
 
-
-
-https://github.com/user-attachments/assets/689f8010-bcaa-4670-a725-79ec33e70934
 
 
