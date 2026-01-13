@@ -167,14 +167,6 @@ The project uses TypeScript with strict type checking enabled.
 - The application includes comprehensive error handling and user feedback
 - Accessibility features are implemented throughout the UI
 
-## 🤝 Contributing
-
-This is a portfolio project. Feel free to explore the code and reach out with any questions!
-
-## 📄 License
-
-This project is created for portfolio and educational purposes.
-
 ## 👤 Author
 
 **Nehir Ozsunar**
