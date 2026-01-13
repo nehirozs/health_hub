@@ -46,6 +46,7 @@ https://github.com/user-attachments/assets/689f8010-bcaa-4670-a725-79ec33e70934
 
 ### 3D Graphics
 - **Three.js** - 3D graphics library
+- **Blender Tool
 - **@react-three/fiber** - React renderer for Three.js
 - **@react-three/drei** - Useful helpers for Three.js
 
