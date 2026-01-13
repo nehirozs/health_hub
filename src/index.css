@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ecliniq Health Kiosk - Sci-Fi Futuristic Design System */
+
+@layer base {
+  :root {
+    /* Sci-Fi Dark palette - Very Deep Navy/Black inspired by futuristic UI */
+    --background: 240 30% 3%;
+    --foreground: 180 100% 98%;
+
+    --card: 240 25% 6%;
+    --card-foreground: 180 100% 98%;
+
+    --popover: 240 25% 6%;
+    --popover-foreground: 180 100% 98%;
+
+    /* Primary - Electric Cyan (#00FFFF inspired) */
+    --primary: 180 100% 50%;
+    --primary-foreground: 240 30% 3%;
+
+    /* Secondary - Dark Cyan/Blue */
+    --secondary: 200 40% 12%;
+    --secondary-foreground: 180 100% 98%;
+
+    --muted: 240 20% 10%;
+    --muted-foreground: 180 50% 65%;
+
+    /* Accent - Bright Electric Blue (#00C0FF inspired) */
+    --accent: 195 100% 55%;
+    --accent-foreground: 240 30% 3%;
+
+    /* Destructive - Neon Red */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success - Neon Green */
+    --success: 150 100% 45%;
+    --success-foreground: 0 0% 10%;
+
+    /* Warning - Neon Amber */
+    --warning: 40 100% 55%;
+    --warning-foreground: 0 0% 10%;
+
+    /* Info - Electric Blue */
+    --info: 210 100% 60%;
+    --info-foreground: 0 0% 10%;
+
+    --border: 240 25% 15%;
+    --input: 240 20% 10%;
+    --ring: 180 100% 50%;
+
+    --radius: 1rem;
+
+    /* Health Status Colors - Neon */
+    --health-excellent: 150 100% 45%;
+    --health-good: 160 80% 50%;
+    --health-normal: 180 100% 50%;
+    --health-warning: 40 100% 55%;
+    --health-alert: 0 85% 55%;
+
+    /* Sci-Fi Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(180 100% 50%) 0%, hsl(200 100% 60%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(190 100% 55%) 0%, hsl(200 100% 60%) 100%);
+    --gradient-health: linear-gradient(135deg, hsl(150 100% 45%) 0%, hsl(180 100% 50%) 100%);
+    /* Futuristic gradient - darker, more dramatic */
+    --gradient-hero: linear-gradient(180deg, hsl(240 30% 3%) 0%, hsl(240 25% 5%) 30%, hsl(240 30% 4%) 70%, hsl(240 30% 3%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(240 25% 8% / 0.8) 0%, hsl(240 20% 6% / 0.6) 100%);
+
+    /* Enhanced Glow Shadows - more prominent, futuristic */
+    --shadow-glow-cyan: 0 0 20px hsl(180 100% 50% / 0.3), 0 0 40px hsl(180 100% 50% / 0.15), 0 0 60px hsl(180 100% 50% / 0.08);
+    --shadow-glow-blue: 0 0 20px hsl(195 100% 55% / 0.3), 0 0 40px hsl(195 100% 55% / 0.15), 0 0 60px hsl(195 100% 55% / 0.08);
+    --shadow-glow-electric: 0 0 20px hsl(200 100% 60% / 0.3), 0 0 40px hsl(200 100% 60% / 0.15), 0 0 60px hsl(200 100% 60% / 0.08);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4), 0 0 1px hsl(180 100% 50% / 0.1);
+    --shadow-elevated: 0 16px 48px hsl(0 0% 0% / 0.5);
+
+    /* Pulse Animation for Health */
+    --pulse-health: hsl(180 100% 50%);
+
+    --sidebar-background: 240 30% 3%;
+    --sidebar-foreground: 180 100% 98%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 240 30% 3%;
+    --sidebar-accent: 195 100% 55%;
+    --sidebar-accent-foreground: 240 30% 3%;
+    --sidebar-border: 240 25% 15%;
+    --sidebar-ring: 180 100% 50%;
+
+    /* Chart Colors - Neon palette */
+    --chart-1: 180 100% 50%;
+    --chart-2: 150 100% 45%;
+    --chart-3: 210 100% 60%;
+    --chart-4: 190 100% 55%;
+    --chart-5: 0 85% 55%;
+
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+  }
+
+  .dark {
+    /* Dark Clinical Mode - default */
+    /* Variables already set in :root, no override needed */
+  }
+
+  .light {
+    /* Clinical Light Mode - soft medical off-white */
+    
+    /* Background - soft medical off-white (F6F8FB equivalent - #F6F8FB) */
+    --background: 214 32% 96%;
+    --foreground: 222 47% 11%; /* #0F172A equivalent - high contrast */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary - desaturated teal for light mode */
+    --primary: 186 85% 42%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - light gray */
+    --secondary: 210 20% 90%;
+    --secondary-foreground: 222 47% 11%;
+    
+    --muted: 210 20% 92%;
+    --muted-foreground: 215 20% 40%; /* Increased contrast for better readability */
+    
+    /* Accent - desaturated blue */
+    --accent: 210 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive - softer red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Success - desaturated green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning - desaturated amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 10%;
+    
+    /* Info - desaturated blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    
+    --border: 210 70% 40%;
+    --input: 210 70% 40%;
+    --ring: 186 85% 42%;
+    
+    /* Health Status Colors - desaturated for light mode */
+    --health-excellent: 142 76% 36%;
+    --health-good: 160 75% 40%;
+    --health-normal: 186 85% 42%;
+    --health-warning: 38 92% 50%;
+    --health-alert: 0 72% 51%;
+    
+    /* Gradients - flat or minimal for light mode */
+    --gradient-primary: hsl(186 85% 42%);
+    --gradient-accent: hsl(210 85% 55%);
+    --gradient-health: hsl(142 76% 36%);
+    /* Light mode hero gradient - soft vertical */
+    --gradient-hero: linear-gradient(180deg, hsl(216 33% 97%) 0%, hsl(214 32% 98%) 50%, hsl(216 33% 97%) 100%);
+    --gradient-glass: rgba(255, 255, 255, 0.75);
+    
+    /* No glow shadows in light mode */
+    --shadow-glow-cyan: none;
+    --shadow-glow-blue: none;
+    --shadow-glow-electric: none;
+    --shadow-soft: 0 1px 3px hsl(0 0% 0% / 0.1), 0 1px 2px hsl(0 0% 0% / 0.06);
+    --shadow-card: 0 1px 3px hsl(0 0% 0% / 0.1), 0 1px 2px hsl(0 0% 0% / 0.06);
+    --shadow-elevated: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    
+    --pulse-health: hsl(186 85% 42%);
+    
+    --sidebar-background: 216 33% 97%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 186 85% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 85% 55%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 70% 40%;
+    --sidebar-ring: 186 85% 42%;
+    
+    /* Chart Colors - desaturated for light mode */
+    --chart-1: 186 85% 42%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 210 85% 55%;
+    --chart-5: 0 72% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    /* Increased base font size for medical device readability */
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Global typography improvements for medical readability */
+  h1 {
+    font-size: 2.5rem; /* 40px - large, confident headlines */
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 1.125rem; /* 18px - larger than typical web UI */
+    line-height: 1.7;
+  }
+
+  /* Light mode typography adjustments */
+  .light {
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+  }
+
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    font-weight: 500;
+    line-height: 1.4;
+    color: hsl(var(--foreground)); /* Ensure high contrast */
+  }
+
+  .light p, .light span, .light div {
+    line-height: 1.7;
+    color: hsl(var(--foreground)); /* Ensure high contrast */
+  }
+
+  /* Dark mode typography - maintain high contrast */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: hsl(var(--foreground));
+  }
+
+  .dark p, .dark span {
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  /* Gradient utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-health {
+    background: var(--gradient-health);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-glass {
+    background: var(--gradient-glass);
+  }
+
+  /* Elevation utilities - replace glow with elevation */
+  .elevation-soft {
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.1), 0 1px 3px hsl(0 0% 0% / 0.08);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  
+  .elevation-card {
+    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.12), 0 2px 6px hsl(0 0% 0% / 0.08);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+  
+  .elevation-elevated {
+    box-shadow: 0 8px 24px hsl(0 0% 0% / 0.15), 0 4px 12px hsl(0 0% 0% / 0.1);
+    border: 1px solid hsl(var(--border) / 0.7);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-primary);
+  }
+  
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-accent);
+  }
+
+  /* Medical Glassmorphism - Futuristic, Enhanced Glow */
+  .glass {
+    /* Dark mode: enhanced blur with subtle glow */
+    @apply bg-card/70 backdrop-blur-md border border-border/40;
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.3), 0 0 1px hsl(180 100% 50% / 0.1);
+  }
+  
+  .glass-strong {
+    /* Dark mode: stronger with enhanced glow */
+    @apply bg-card/80 backdrop-blur-lg border border-border/50;
+    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.4), 0 0 2px hsl(180 100% 50% / 0.15);
+  }
+
+  /* Light mode glassmorphism - clinical and restrained */
+  .light .glass {
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid hsl(210 70% 40% / 0.6);
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.08);
+  }
+  
+  .light .glass-strong {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(210 70% 40% / 0.7);
+    box-shadow: 0 4px 12px hsl(0 0% 0% / 0.10);
+  }
+
+  /* Border elevation - replace glow with elevation */
+  .border-elevation {
+    @apply border border-primary/30;
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.1), 0 1px 3px hsl(0 0% 0% / 0.08);
+  }
+  
+  .light .border-elevation {
+    border: 1px solid hsl(210 70% 40% / 0.6);
+    box-shadow: 0 1px 3px hsl(0 0% 0% / 0.08);
+  }
+  
+  .border-elevation-accent {
+    @apply border border-accent/30;
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.1), 0 1px 3px hsl(0 0% 0% / 0.08);
+  }
+  
+  .light .border-elevation-accent {
+    border: 1px solid hsl(210 70% 40% / 0.6);
+    box-shadow: 0 1px 3px hsl(0 0% 0% / 0.08);
+  }
+
+  /* Text utilities - no glow */
+  .neon-text {
+    text-shadow: none;
+  }
+  
+  .light .neon-text {
+    text-shadow: none;
+  }
+
+  /* Health Status Utilities */
+  .health-excellent {
+    color: hsl(var(--health-excellent));
+  }
+  
+  .health-good {
+    color: hsl(var(--health-good));
+  }
+  
+  .health-normal {
+    color: hsl(var(--health-normal));
+  }
+  
+  .health-warning {
+    color: hsl(var(--health-warning));
+  }
+  
+  .health-alert {
+    color: hsl(var(--health-alert));
+  }
+
+  .bg-health-excellent {
+    background-color: hsl(var(--health-excellent));
+  }
+  
+  .bg-health-good {
+    background-color: hsl(var(--health-good));
+  }
+  
+  .bg-health-normal {
+    background-color: hsl(var(--health-normal));
+  }
+  
+  .bg-health-warning {
+    background-color: hsl(var(--health-warning));
+  }
+  
+  .bg-health-alert {
+    background-color: hsl(var(--health-alert));
+  }
+
+  /* Futuristic display font */
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* Scanline effect overlay */
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(180 100% 50% / 0.03) 2px,
+      hsl(180 100% 50% / 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  /* Static border elevation */
+  .elevated-border {
+    position: relative;
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 0 2px 8px hsl(0 0% 0% / 0.1), 0 1px 3px hsl(0 0% 0% / 0.08);
+  }
+
+}
