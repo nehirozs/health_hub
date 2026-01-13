@@ -1,4 +1,4 @@
-# Health Hub Kiosk Application
+# Health Hub Kiosk Interface
 
 A modern, interactive health kiosk application built with React and TypeScript. This application provides an intuitive interface for healthcare facilities to conduct basic health measurements and connect patients with telehealth services.
 
